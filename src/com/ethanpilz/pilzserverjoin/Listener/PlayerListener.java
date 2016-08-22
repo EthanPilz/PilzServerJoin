@@ -1,5 +1,6 @@
-package com.ethanpilz.pilzserverjoin;
+package com.ethanpilz.pilzserverjoin.Listener;
 
+import com.ethanpilz.pilzserverjoin.PilzServerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -9,20 +10,17 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.meta.FireworkMeta;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main
-        extends JavaPlugin
-        implements Listener {
-    public void onEnable() {
-        Bukkit.getServer().getPluginManager().registerEvents(this, this);
-    }
-
+/**
+ * Created by austinpilz on 8/22/16.
+ */
+public class PlayerListener implements Listener
+{
     @EventHandler
     public void onPlayerJoin(final PlayerJoinEvent pje) {
         Player p = pje.getPlayer();
         if (p.hasPermission("psj.firework")) {
-            Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
+            Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(PilzServerJoin.instance, new Runnable() {
                 public void run() {
                     Firework f = (Firework) pje.getPlayer().getWorld().spawn(pje.getPlayer().getLocation(), Firework.class);
 
