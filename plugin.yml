@@ -2,7 +2,7 @@ name: PilzServerJoin
 author: ethanpilz
 version: 1.0
 description: Join the server with a firework.
-main: com.ethanpilz.pilzserverjoin.Main
+main: com.ethanpilz.pilzserverjoin.PilzServerJoin
 commands:
 permissions:
     psj.firework:
