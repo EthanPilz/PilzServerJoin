@@ -13,7 +13,7 @@ public class PilzServerJoin extends JavaPlugin
     public static final String pluginName = "PilzServerJoin";
     public static final String pluginVersion = "1.1";
     public static final String chatPrefix = ChatColor.LIGHT_PURPLE + "[PSJ] " + ChatColor.WHITE;
-    public static final String consolePrefix = "";
+    public static final String consolePrefix = "[PilzServerJoin] ";
     public static PilzServerJoin instance;
     public static final Logger log = Logger.getLogger("Minecraft");
 
